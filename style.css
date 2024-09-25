@@ -234,10 +234,32 @@ img {
 
 .animated-text {
   opacity: 0; /* Start at 0 opacity */
-  animation: fadeInOut 4s ease-in-out forwards;
+  animation: fadeInOut 6s ease-in-out forwards;
   text-align: center;
-  padding-top: 5rem;
-  color: white; /* 4s animation */
+  margin-top: 4rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: black;
+  background-clip: text;
+  background: rgba(255, 255, 255, .6);
+  border: #1c0155 2px solid;
+  border-radius: 30px;
+  padding: 5px 10px;
+  font-family: var(--body-font);
+  list-style: none;
+  text-decoration: none;
+}
+
+.animated-text a {
+  text-decoration: none;
+  color: white;
+}
+
+.highlight-background {
+  display: inline-block; /* Allows background color to fit text */
+  padding: 0.5rem; /* Add padding around the text */
+  border-radius: 5px;
 }
 
 /* Keyframes for the fade-in and fade-out effect */
@@ -250,10 +272,16 @@ img {
     opacity: 1;
     transform: scale(1); /* Fully visible, normal size */
   }
+  80% {
+    opacity: 0.85;
+    transform: scale(0.95);
+  }
   100% {
     opacity: 0.7;
     transform: scale(0.9);
-    color: #1c0155;/* Slightly reduced opacity and size */
+    color: #1c0155;
+    background-color: rgba(158, 1, 161, .1);
+    border: /* Slightly reduced opacity and size */
   }
 }
 
@@ -392,7 +420,7 @@ img {
 .private-card img {
   width: 100%; /* Full width of the card */
   height: auto; /* Maintain aspect ratio */
-  border-bottom: 5px solid rgba(158, 1, 161, 0.7); /* Colored border below image */
+  border-bottom: 5px solid #9e01a1; /* Colored border below image */
 }
 
 .private-card h3 {
@@ -483,7 +511,7 @@ img {
 }
 
 .articles {
-  margin: .5rem;
+  margin: 2rem auto;
   color:#9e01a1;
   background-color: rgba(255, 255, 255, .4);
   border-radius: 10px;

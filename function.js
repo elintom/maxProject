@@ -81,3 +81,13 @@ document.querySelectorAll('.buttonStory-summary').forEach(function(summary) {
     }
   });
 });
+
+// Wait for the DOM to fully load
+document.addEventListener('DOMContentLoaded', function() {
+  const linkElement = document.getElementById('animated-link');
+
+  // Listen for the end of the animation
+  linkElement.addEventListener('animationend', function() {
+    linkElement.textContent = 'Read Now'; // Change the text
+  });
+});
