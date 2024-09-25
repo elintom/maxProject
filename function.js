@@ -1,7 +1,8 @@
 /*==================== SHOW MENU ====================*/
 const navMenu = document.getElementById('nav-menu'),
       navToggle = document.getElementById('nav-toggle'),
-      navClose = document.getElementById('nav-close')
+      navClose = document.getElementById('nav-close'),
+      navImg = document.getElementById('img-toggle')
 
 /*===== MENU SHOW =====*/
 /* Validate if constant exists */
@@ -19,29 +20,11 @@ if(navClose){
     })
 }
 
-/*
-const button = document.querySelector("#nav-menu")
-
-button.addEventListener("click", () => {
-  button.innerText = " " //make this disappear or fade
-  button.disabled = true
-  link.classList.remove('d-none')
-})
-
-const link = document.querySelector("#reset-link")
-
-link.addEventListener("click", () => {
-  button.innerText = "Click me!"
-  button.disabled = false
-  link.classList.add('d-none')
-})
-*/
-
-/*
-function onclick_event() {
-    document.getElementById("nav-menu").innerHTML =
-
-} */
+if(navImg){
+  navImg.addEventListener('click', () =>{
+    navMenu.classList.add('show-menu')
+  })
+}
 
 /*==================== REMOVE MENU MOBILE ====================*/
 const navLink = document.querySelectorAll('.nav__link')
@@ -62,15 +45,11 @@ const blurHeader = () => {
 }
 window.addEventListener('scroll', blurHeader)
 
-
-
-const scrollUp = () => {
-    const scrollUp = document.getElementById('scroll-up');
-    // When the scroll is higher than 200 viewport height, add the show-scroll class to the a tag with the scroll-top class
-    this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
-                          : scrollUp.classList.remove('show-scroll')
-}
-window.addEventListener('scroll', scrollUp)
+/*=================== ADD LOGO TO BLUR HEADER ===============*/
+/* const addLogo = () => {
+  const header = document.getElementById('img-toggle')
+  this.scrollY >= 50 ? header.classList.add('')
+} */
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 const sections = document.querySelectorAll('section[id]')
@@ -99,5 +78,5 @@ window.addEventListener('scroll', scrollActive)
 // NOT ACTUALLY NEEDED NOW BUT KEPT AS AN EXAMPLE
 // function onclick_event() {
 //    document.getElementById("arm").innerHTML =
-//    "Arm Balance: as Leonardo da Vinci once said, “once you have tasted flight, you will forever walk the earth with your eyes turned skyward”. Arm balances have a funny way of seeming impossible until one day they are not. But on mastering arm balance techniques, the impossible is attained and flight ensues. That taste of flight captures the soul of yogis. Arm balances have amazing benefits for overall health and wellness and some poses also offer hip-opening and flexibility in the thighs and hamstrings. Mastering this style is bound to give you a major confidence boost. This is best suited to intermediate and advanced.";
+//    "Arm Balance: as Leonardo da Vinci once said, blabla";
 // }
