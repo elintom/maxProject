@@ -448,6 +448,10 @@ img {
   font-size: 1.2rem;
 }
 
+.talent-links a {
+  color: #9e01a1; /* not working */
+}
+
 .videos {
   display: flex; /* Use flexbox for video layout */
   flex-wrap: wrap; /* Allow videos to wrap on smaller screens */
