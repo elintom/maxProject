@@ -71,12 +71,13 @@ function scrollActive(){
 }
 window.addEventListener('scroll', scrollActive)
 
-
-
-
-
-// NOT ACTUALLY NEEDED NOW BUT KEPT AS AN EXAMPLE
-// function onclick_event() {
-//    document.getElementById("arm").innerHTML =
-//    "Arm Balance: as Leonardo da Vinci once said, blabla";
-// }
+document.querySelectorAll('.buttonStory-summary').forEach(function(summary) {
+  summary.addEventListener('click', function() {
+    const text = summary.querySelector('.buttonStory-text');
+    if (summary.parentElement.hasAttribute('open')) {
+      text.style.display = 'inline'; // Show when closed
+    } else {
+      text.style.display = 'none'; // Hide when opened
+    }
+  });
+});
