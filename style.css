@@ -185,6 +185,11 @@ img {
   .carousel-item img {
     max-width: 90%; /* NOT WORKINGEnsure images don't touch the edges */
   }
+  summary {
+    list-style: none;
+    text-decoration: none;
+    display: none;
+  }
 }
 
 @media screen and (min-width 1280px) { /* 1280px and up (large desktop) */
