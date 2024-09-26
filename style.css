@@ -90,7 +90,7 @@ img {
   font-family: var(--body-font);
   border: #9e01a1 .1px solid;
   border-radius: 10px;
-  padding: .3rem;
+  padding: .5rem;
   width: 100%;
   text-align: center;
   list-style: none;
@@ -192,7 +192,50 @@ img {
 }
 
 @media screen and (min-width: 1024px) { /* large laptops */
-
+  body {
+    /* prevent scroll behaviour to the right */
+  }
+  .nav-menu {
+    right: 0;
+  }
+  .sizing {
+    margin: auto 10rem;
+  }
+  .animated-text {
+    /* need to shrink */
+  }
+  .carousel {
+    margin: auto 20rem; /* only sits correct on my exact laptop screen size */
+    width: 400px;
+  }
+  .about-container img {
+    width: 600px;
+    margin-bottom: 3rem;
+  }
+  .about-container p {
+    margin: 3rem;
+  }
+  .button-margin {
+    margin-top: 4rem;
+  }
+  .videos {
+    /* to do */
+  }
+  .accident-card img {
+    width: 600px;
+  }
+  .accident-card h2 {
+    padding-top: 3rem;
+  }
+  .story-text {
+    margin: 3rem 2rem;
+  }
+  .location-container {
+    margin: 3rem;
+  }
+  .footer-card:first-child {
+    margin-left: 22rem; /* only fits on my ecxact laptop screen size */
+  }
 }
 
 @media screen and (min-width: 768px) { /* tablets */
@@ -462,9 +505,11 @@ img {
 
 .talent-links a,
 .about-container:first-child a {
-  background:  linear-gradient(to right, #99519a 1%, white 99%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background:  linear-gradient(to right, rgba(153, 81, 154, .5) 1%, rgba(255, 255, 255, .05) 99%);
+  color: #1c0155;
+  border-radius: 10px;
+  padding-left: .4rem;
+  padding-right: .4rem;
 }
 
 .videos {
