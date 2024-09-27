@@ -185,11 +185,12 @@ img {
   .carousel-item img {
     max-width: 90%; /* NOT WORKINGEnsure images don't touch the edges */
   }
-  .buttonStory summary {
-    list-style: none;
+  .buttonStory-summary {
+    list-style: none; /* Removes the default triangle */
+    cursor: pointer;
     padding-left: 0;
   }
-  .buttonStory summary::-webkit-details-marker {
+  .buttonStory-summary::-webkit-details-marker {
     display: none;
   }
 }
@@ -512,11 +513,11 @@ img {
 
 .talent-links a,
 .about-container:first-child a {
-  background:  linear-gradient(to right, rgba(153, 81, 154, .5) 1%, rgba(255, 255, 255, .05) 99%);
-  color: #1c0155;
-  border-radius: 10px;
-  padding-left: .4rem;
-  padding-right: .4rem;
+  font-weight: bold;
+  background: linear-gradient(to bottom, #ffffff, #f693f7, #7f0281);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .videos {
