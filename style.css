@@ -185,9 +185,11 @@ img {
   .carousel-item img {
     max-width: 90%; /* NOT WORKINGEnsure images don't touch the edges */
   }
-  summary {
+  .buttonStory summary {
     list-style: none;
-    text-decoration: none;
+    padding-left: 0;
+  }
+  .buttonStory summary::-webkit-details-marker {
     display: none;
   }
 }
